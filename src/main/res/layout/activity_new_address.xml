@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewAddress"
+    android:background="#015573">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#64B5F6"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TextView for "New Note" -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FBE9E7"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!-- LinearLayout container for note fields -->
+
+    <!-- SearchView (Optional for search functionality) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/round_corner"
+        android:orientation="vertical"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-2dp">
+
+        <!-- TextInputEditText for Title -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputNewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/round_corner"
+            android:hint="Title"
+            android:padding="15dp" />
+
+        <!-- TextInputEditText for Description -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/round_corner"
+            android:gravity="top"
+            android:hint="Description"
+            android:lines="4"
+            android:padding="15dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NewLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/round_corner"
+            android:gravity="top"
+            android:hint="Longitude"
+            android:padding="15dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/NewLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/round_corner"
+            android:gravity="top"
+            android:hint="Latitude"
+            android:padding="15dp" />
+
+        <!-- Spinner for Color Selection -->
+
+        <!-- Button for Image Upload -->
+
+        <!-- ImageView for displaying uploaded image -->
+
+        <!-- Button to save the note -->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#4FC3F7"
+        android:text="Save Address"
+        android:textColor="#FBE9E7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- Bottom Button to create a new note -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
